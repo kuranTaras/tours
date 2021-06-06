@@ -1,0 +1,109 @@
+.tour
+  padding: 0 20px
+  @media (max-width: 768px)
+    padding: 0 10px
+  .container
+    flex-direction: column
+    padding: 100px 0 90px 0
+    position: relative
+    @media (max-width: 768px)
+      padding-bottom: 0
+      padding-top: 50px
+    h1
+      font-family: Play, sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 50px
+      line-height: 116%
+      color: #033756
+      text-align: center
+      @media (max-width: 768px)
+        font-size: 30px
+    h2
+      font-family: Arial, sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 25px
+      line-height: 115%
+      color: #033756
+      margin: 15px 0 56px 0
+      text-align: center
+      @media (max-width: 768px)
+        margin-bottom: 20px
+        margin-top: 10px
+        font-size: 18px
+    .tour__buttons
+      position: absolute
+      display: flex
+      top: 188px
+      right: 5px
+      @media (max-width: 1300px)
+        top: 220px
+      @media (max-width: 768px)
+        display: none
+      .tour__next
+        transform: rotate(180deg)
+        margin-top: 2px
+        margin-left: 15px
+      .tour__next, .tour__prev
+        cursor: pointer
+        &:hover
+          path
+            fill: #E15719
+        svg
+          path
+            transition-duration: 0.3s
+    .swiper-container
+      .swiper-wrapper
+        overflow: visible
+        height: 350px
+        @media (max-width: 1300px)
+          height: 290px
+        .hot-otp-form-wrap
+          margin-top: 0
+          float: none
+          //height: 350px
+          border-radius: 15px
+          &:hover
+            .hot-otp-img
+              opacity: 1
+          .hot-otp-img
+            width: 100%!important
+            max-width: none
+            min-width: auto
+            height: 350px
+            img
+              min-height: auto
+              min-width: auto
+              height: 100%
+          .hot-otp-place
+            display: none
+          .hot-otp-price
+            display: none
+          .hot-otp-tour-info
+            display: none
+          .hot-otp-price-count
+            display: none
+          .hot-otp-description
+            font-family: Play, sans-serif
+            font-style: normal
+            font-weight: bold
+            font-size: 35px
+            line-height: 114%
+            color: #FFFFFF
+            margin-top: auto
+            padding: 0 30px 30px 0
+            @media (max-width: 768px)
+              font-size: 20px
+              padding: 0 20px 20px 0
+          .hot-otp-tour-block
+            width: 100%!important
+            display: flex
+            height: 100%
+            margin-bottom: 0
+            margin-top: -350px
+            max-width: none
+            background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(0, 3, 5, 0.84) 100%)
+            a
+              margin-top: auto
+              margin-left: auto

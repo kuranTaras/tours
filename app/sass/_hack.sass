@@ -1,0 +1,127 @@
+.hack
+  padding: 0 20px
+  .container
+    flex-direction: column
+    padding: 100px 0 90px 0
+    @media (max-width: 768px)
+      padding: 30px 0 45px 0
+    h1
+      font-family: Play, sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 50px
+      line-height: 115%
+      color: #033756
+      text-align: center
+      @media (max-width: 768px)
+        font-size: 30px
+    h2
+      margin: 15px 0 45px 0
+      font-family: Arial, sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 25px
+      line-height: 115%
+      text-align: center
+      color: #033756
+      @media (max-width: 768px)
+        font-size: 18px
+        margin: 15px 0 20px 0
+    .hack__hacks
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 30px
+      @media (max-width: 1200px)
+        grid-gap: 20px
+      @media (max-width: 1024px)
+        grid-template-columns: 1fr
+      .hack__hack
+        height: fit-content
+        display: flex
+        flex-direction: column
+        background: linear-gradient(180deg, rgba(3, 129, 204, 0.4) 0%, rgba(225, 242, 255, 0.4) 0.01%, rgba(248, 252, 255, 0.4) 100%)
+        border: 1px solid #FFFFFF
+        box-sizing: border-box
+        backdrop-filter: blur(20px)
+        border-radius: 25px
+        &:nth-child(2n)
+          .hack__top
+            h3
+              color: #3AAA3E
+        &:nth-child(3n)
+          .hack__top
+            h3
+              color: #E15719
+        &:nth-child(4n)
+          .hack__top
+            h3
+              color: #EED572
+        &:nth-child(5n)
+          .hack__top
+            h3
+              color: #3AAA3E
+        &:nth-child(6n)
+          .hack__top
+            h3
+              color: #0381CC
+        .hack__top
+          display: flex
+          padding: 18px 30px
+          align-items: center
+          cursor: pointer
+          @media (max-width: 1200px)
+            padding: 12px 20px
+          h3
+            font-family: Play, sans-serif
+            font-style: normal
+            font-weight: bold
+            font-size: 90px
+            line-height: 115%
+            color: #0381CC
+            margin-right: 44px
+            @media (max-width: 1200px)
+              font-size: 60px
+              margin-right: 20px
+            @media (max-width: 768px)
+              font-size: 35px
+          h4
+            font-family: Play, sans-serif
+            font-style: normal
+            font-weight: bold
+            font-size: 30px
+            line-height: 116%
+            color: #0381CC
+            @media (max-width: 1200px)
+              font-size: 24px
+            @media (max-width: 768px)
+              font-size: 18px
+        .hack__bottom
+          padding: 0 45px 35px 30px
+          display: none
+          p
+            font-family: Arial, sans-serif
+            font-style: normal
+            font-weight: normal
+            font-size: 25px
+            line-height: 115%
+            color: #033756
+            @media (max-width: 1200px)
+              font-size: 18px
+            @media (max-width: 768px)
+              font-size: 14px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

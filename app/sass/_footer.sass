@@ -1,0 +1,181 @@
+.footer
+  .container
+    max-width: 100%
+    flex-direction: column
+    .footer__top
+      height: 458px
+      position: relative
+      @media (max-width: 1024px)
+        height: auto
+      iframe
+        @media (max-width: 1024px)
+          display: none
+      .footer__content
+        max-width: 520px
+        left: 12.5%
+        position: absolute
+        top: 0
+        width: 100%
+        height: 100%
+        @media (max-width: 1024px)
+          max-width: 100%
+          left: 0
+          position: relative
+        .footer__contacts
+          display: flex
+          position: absolute
+          top: 0
+          left: 0
+          height: 100%
+          flex-direction: column
+          padding: 72px 44px 60px 67px
+          background: linear-gradient(180deg, rgba(3, 129, 204, 0.4) 0%, rgba(225, 242, 255, 0.4) 57.29%, rgba(248, 252, 255, 0.4) 100%)
+          border: 1px solid #FFFFFF
+          backdrop-filter: blur(20px)
+          border-radius: 25px 25px 0 0
+          @media (max-width: 1024px)
+            width: 100%
+            align-items: center
+            padding: 30px
+            position: relative
+          @media (max-width: 768px)
+            padding: 20px 10px
+          h1
+            font-family: Play, sans-serif
+            font-style: normal
+            font-weight: bold
+            font-size: 50px
+            line-height: 115%
+            color: #033756
+            @media (max-width: 768px)
+              font-size: 30px
+              margin-bottom: 10px
+          .footer__phone
+            display: flex
+            flex-direction: column
+            margin-bottom: 20px
+            span
+              &:first-child
+                &:before
+                  background-image: url("../img/footer/05.png")
+              &:last-child
+                &:before
+                  display: none
+          .footer__email
+            span
+              &:before
+                background-image: url("../img/footer/06.png")
+          .footer__location
+            margin: 20px 0 40px 0
+            @media (max-width: 768px)
+              margin-bottom: 20px
+            span
+              &:before
+                background-image: url("../img/footer/07.png")
+          span
+            font-family: Arial, sans-serif
+            font-style: normal
+            font-weight: normal
+            font-size: 25px
+            line-height: 115%
+            color: #033756
+            padding-left: 40px
+            position: relative
+            @media (max-width: 768px)
+              font-size: 18px
+            &:before
+              content: ''
+              position: absolute
+              width: 20px
+              height: 20px
+              left: 0
+              top: 50%
+              transform: translateY(-50%)
+            &:not(:last-child)
+              margin-bottom: 4px
+          .footer__socials
+            display: flex
+            .footer__social
+              display: flex
+              align-items: center
+              justify-content: center
+              width: 40px
+              height: 40px
+              border-radius: 50%
+              background: #E15719
+              border: 1px solid #E15719
+              transition-duration: 0.3s
+              &:hover
+                background-color: #FFFFFF
+                path
+                  fill: #E15719
+              &:active
+                background: linear-gradient(180deg, #E15719 0%, #B13A04 100%)
+                backdrop-filter: blur(20px)
+              &:not(:last-child)
+                margin-right: 15px
+              &:first-child
+                background: #3AAA3E
+                border: 1px solid #3AAA3E
+                &:hover
+                  background-color: #FFFFFF
+                  path
+                    fill: #3AAA3E
+                &:active
+                  background: linear-gradient(180deg, #3AAA3E 0%, #066309 100%)
+                  backdrop-filter: blur(20px)
+              &:nth-child(2)
+                border: 1px solid #078FFF
+                background: #078FFF
+                &:hover
+                  background-color: #FFFFFF
+                  path
+                    fill: #078FFF
+                &:active
+                  background: linear-gradient(180deg, #078FFF 0%, #034377 100%)
+                  backdrop-filter: blur(20px)
+              &:nth-child(3)
+                background: #FFC806
+                border: 1px solid #FFC806
+                &:hover
+                  background-color: #FFFFFF
+                  path
+                    fill: #FFC806
+                &:active
+                  background: linear-gradient(180deg, #FFC806 0%, #CA9F07 100%)
+                  backdrop-filter: blur(20px)
+              svg
+                path
+                  transition-duration: 0.3s
+    .footer__bottom
+      background: #259AEB
+      padding: 0 20px
+      .footer__content
+        max-width: 1440px
+        display: flex
+        margin: 0 auto
+        width: 100%
+        justify-content: space-between
+        padding: 12px 0 23px 0
+        align-items: center
+        @media (max-width: 1024px)
+          flex-direction: column
+        span
+          font-family: Play, sans-serif
+          font-style: normal
+          font-weight: bold
+          font-size: 20px
+          line-height: 23px
+          color: #FFFFFF
+          @media (max-width: 1024px)
+            margin: 20px 0
+        .footer__cards
+          display: flex
+          align-items: center
+          .footer__card
+            &:not(:last-child)
+              margin-right: 5px
+.footer_contacts
+  .container
+    .footer__top
+      display: none

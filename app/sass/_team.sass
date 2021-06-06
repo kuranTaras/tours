@@ -1,0 +1,135 @@
+.team
+  background: #F8FCFF
+  padding: 0 20px
+  .container
+    flex-direction: column
+    padding: 116px 0 119px 0
+    align-items: center
+    @media (max-width: 768px)
+      padding: 50px 0
+    h1
+      font-family: Play, sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 50px
+      line-height: 115%
+      color: #033756
+      margin-bottom: 120px
+      @media (max-width: 768px)
+        font-size: 30px
+        margin-bottom: 70px
+    .team__persons
+      display: grid
+      width: 100%
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-gap: 30px
+      @media (max-width: 1024px)
+        grid-template-columns: 1fr 1fr
+        grid-gap: 75px 20px
+      @media (max-width: 520px)
+        grid-template-columns: 1fr
+        grid-gap: 60px 0
+      .team__person
+        background: linear-gradient(180deg, rgba(3, 129, 204, 0.4) 0%, rgba(225, 242, 255, 0.4) 0.01%, rgba(248, 252, 255, 0.4) 100%)
+        border: 1px solid
+        box-sizing: border-box
+        backdrop-filter: blur(20px)
+        border-radius: 25px
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-bottom: 27px
+        &:nth-child(n)
+          border-color: #0381CC
+          .team__img
+            border-color: #078FFF
+        &:nth-child(2n)
+          border-color: #FEE67B
+          .team__img
+            border-color: #FFC806
+        &:nth-child(3n)
+          border-color: #3AAA3E
+          .team__img
+            border-color: #3AAA3E
+        &:nth-child(4n)
+          border-color: #E15719
+          .team__img
+            border-color: #E15719
+        .team__img
+          width: 165px
+          height: 165px
+          border-radius: 50%
+          overflow: hidden
+          margin-top: -57px
+          border: 3px solid
+          @media (max-width: 1024px)
+            width: 120px
+            height: 120px
+          @media (max-width: 520px)
+            width: 90px
+            height: 90px
+            margin-top: -45px
+          img
+            width: 100%
+            height: 100%
+            object-position: center
+            object-fit: cover
+        h2
+          font-family: Play, sans-serif
+          font-style: normal
+          font-weight: bold
+          font-size: 30px
+          line-height: 115%
+          color: #033756
+          margin: 13px 0 10px 0
+          text-align: center
+          @media (max-width: 768px)
+            font-size: 22px
+        h3
+          font-family: Arial, sans-serif
+          font-style: normal
+          font-weight: normal
+          font-size: 20px
+          line-height: 115%
+          color: #259AEB
+          text-align: center
+          @media (max-width: 768px)
+            font-size: 18px
+        h4
+          font-family: Arial, sans-serif
+          font-style: normal
+          font-weight: bold
+          font-size: 20px
+          line-height: 115%
+          color: #033756
+          text-align: center
+          margin: 10px 0
+          @media (max-width: 768px)
+            font-size: 18px
+        .team__socials
+          display: flex
+          justify-content: center
+          a
+            width: 40px
+            height: 40px
+            display: flex
+            align-items: center
+            justify-content: center
+            background: #FFFFFF
+            border: 1px solid #E15719
+            backdrop-filter: blur(20px)
+            border-radius: 50%
+            transition-duration: 0.3s
+            &:not(:last-child)
+              margin-right: 10px
+            &:hover
+              background: #E15719
+              path
+                fill: #FFFFFF
+              svg
+                path
+                  transition-duration: 0.3s
+            &:active
+              background: linear-gradient(180deg, #E15719 0%, #B13A04 100%)
+
+

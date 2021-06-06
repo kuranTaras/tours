@@ -1,0 +1,263 @@
+.contacts
+  padding: 0 20px
+  .container
+    max-width: 985px
+    flex-direction: column
+    padding: 206px 0 223px 0
+    @media (max-width: 768px)
+      padding: 150px 0 50px 0
+    .contacts__titles
+      margin-bottom: 55px
+      @media (max-width: 768px)
+        margin-bottom: 20px
+      h1
+        font-family: Play, sans-serif
+        font-style: normal
+        font-weight: bold
+        font-size: 50px
+        line-height: 115%
+        text-align: center
+        color: #033756
+        @media (max-width: 768px)
+          font-size: 30px
+      h2
+        font-family: Arial, sans-serif
+        font-style: normal
+        font-weight: normal
+        font-size: 25px
+        line-height: 115%
+        text-align: center
+        color: #033756
+        margin-top: 15px
+        @media (max-width: 768px)
+          font-size: 18px
+          margin-top: 7px
+    .contacts__content
+      display: flex
+      @media (max-width: 1024px)
+        justify-content: space-between
+      @media (max-width: 768px)
+        flex-direction: column-reverse
+      .contacts__info
+        display: flex
+        max-width: 405px
+        margin-right: 60px
+        flex-direction: column
+        @media (max-width: 1024px)
+          width: 41.1%
+          max-width: none
+          margin-right: 20px
+        @media (max-width: 768px)
+          width: 100%
+          margin-right: 0
+        .contacts__contact
+          display: flex
+          margin-left: 40px
+          align-items: center
+          background: linear-gradient(180deg, rgba(3, 129, 204, 0.4) 0%, rgba(225, 242, 255, 0.4) 0.01%, rgba(248, 252, 255, 0.4) 100%)
+          border: 1px solid #FFFFFF
+          box-sizing: border-box
+          backdrop-filter: blur(20px)
+          border-radius: 15px 25px 25px 25px
+          margin-bottom: 30px
+          max-width: 340px
+          @media (max-width: 768px)
+            max-width: 100%
+          .contacts__img
+            display: flex
+            width: 80px
+            height: 80px
+            border-radius: 50%
+            align-items: center
+            justify-content: center
+            background: #FFC806
+            margin-left: -40px
+            margin-right: 22px
+            @media (max-width: 768px)
+              width: 60px
+              height: 60px
+          .contacts__text
+            display: flex
+            flex-direction: column
+            span
+              font-family: Play, sans-serif
+              font-style: normal
+              font-weight: bold
+              font-size: 25px
+              line-height: 115%
+              color: #033756
+              @media (max-width: 1024px)
+                font-size: 20px
+              @media (max-width: 768px)
+                font-size: 18px
+        .contacts__email
+          .contacts__img
+            background: #3AAA3E
+        .contacts__location
+          .contacts__img
+            background: #218BE1
+        p
+          font-family: Play, sans-serif
+          font-style: normal
+          font-weight: bold
+          font-size: 25px
+          line-height: 115%
+          color: #033756
+          margin-bottom: 25px
+          @media (max-width: 1024px)
+            font-size: 20px
+          @media (max-width: 768px)
+            text-align: center
+            font-size: 18px
+        .contacts__socials
+          display: flex
+          @media (max-width: 768px)
+            margin: 0 auto
+          a
+            width: 40px
+            height: 40px
+            display: flex
+            align-items: center
+            border-radius: 50%
+            justify-content: center
+            transition-duration: 0.3s
+            &:not(:last-child)
+              margin-right: 15px
+            &:first-child
+              background: #3AAA3E
+              border: 1px solid #3AAA3E
+              &:hover
+                background-color: #FFFFFF
+                path
+                  fill: #3AAA3E
+              &:active
+                background: linear-gradient(180deg, #3AAA3E 0%, #066309 100%)
+                backdrop-filter: blur(20px)
+            &:nth-child(2)
+              border: 1px solid #078FFF
+              background: #078FFF
+              &:hover
+                background-color: #FFFFFF
+                path
+                  fill: #078FFF
+              &:active
+                background: linear-gradient(180deg, #078FFF 0%, #034377 100%)
+                backdrop-filter: blur(20px)
+            &:nth-child(3)
+              background: #FFC806
+              border: 1px solid #FFC806
+              &:hover
+                background-color: #FFFFFF
+                path
+                  fill: #FFC806
+              &:active
+                background: linear-gradient(180deg, #FFC806 0%, #CA9F07 100%)
+                backdrop-filter: blur(20px)
+            &:nth-child(4n)
+              background: #E15719
+              border: 1px solid #E15719
+              &:hover
+                background-color: #FFFFFF
+                path
+                  fill: #E15719
+              &:active
+                background: linear-gradient(180deg, #E15719 0%, #B13A04 100%)
+                backdrop-filter: blur(20px)
+            svg
+              path
+                transition-duration: 0.3s
+      .contacts__form
+        display: flex
+        flex-direction: column
+        background: linear-gradient(180deg, rgba(3, 129, 204, 0.4) 0%, rgba(225, 242, 255, 0.4) 57.29%, rgba(225, 242, 255, 0.4) 100%)
+        backdrop-filter: blur(20px)
+        border-radius: 25px
+        padding: 40px 100px
+        align-items: center
+        @media (max-width: 1024px)
+          padding: 30px 20px
+          width: 52.3%
+        @media (max-width: 768px)
+          width: 80%
+          margin: 0 auto 20px auto
+          padding: 15px 10px
+        @media (max-width: 520px)
+          width: 100%
+        h3
+          font-family: Play, sans-serif
+          font-style: normal
+          font-weight: bold
+          font-size: 35px
+          line-height: 115%
+          color: #033756
+          margin-bottom: 15px
+          text-align: center
+          @media (max-width: 768px)
+            font-size: 20px
+            margin-bottom: 5px
+        h4
+          font-family: Arial, sans-serif
+          font-style: normal
+          font-weight: normal
+          font-size: 20px
+          line-height: 115%
+          text-align: center
+          color: #033756
+          @media (max-width: 768px)
+            font-size: 16px
+        form
+          display: flex
+          flex-direction: column
+          margin-top: 15px
+          align-items: center
+          width: 100%
+          max-width: 280px
+          @media (max-width: 1024px)
+            max-width: 100%
+          @media (max-width: 768px)
+            max-width: 70%
+          @media (max-width: 520px)
+            max-width: 100%
+          input, textarea
+            background: #FFFFFF
+            border: 1px solid #0381CC
+            font-family: Arial, sans-serif
+            font-style: normal
+            font-weight: normal
+            font-size: 15px
+            line-height: 17px
+            color: #033756
+            margin-bottom: 15px
+            padding: 17px 15px
+            max-width: 265px
+            width: 100%
+            resize: none
+            @media (max-width: 1024px)
+              max-width: 100%
+            @media (max-width: 768px)
+              padding: 10px
+              margin-bottom: 10px
+          button
+            width: 100%
+            cursor: pointer
+            font-family: Play, sans-serif
+            font-style: normal
+            font-weight: bold
+            font-size: 25px
+            line-height: 115%
+            background: #E15719
+            color: #FFFFFF
+            padding: 20px
+            border-radius: 35px
+            transition-duration: 0.5s
+            background: linear-gradient(180deg, #E15719, #E15719, #E15719, #FFC806) 0% 0%
+            background-size: 200% 200%
+            @media (max-width: 768px)
+              padding: 10px 30px
+              font-size: 18px
+              margin: 0 auto
+              width: auto
+            &:hover
+              background-position: 100% 100%
+            &:active
+              background: linear-gradient(180deg, #FF5C12 0%, #A53401 56.25%, #FF5C12 100%)

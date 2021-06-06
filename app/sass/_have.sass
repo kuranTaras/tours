@@ -1,0 +1,146 @@
+.have
+  padding: 0 20px
+  .container
+    flex-direction: column
+    padding: 100px 0 50px 0
+    @media (max-width: 768px)
+      padding: 50px 0 20px 0
+    h1
+      font-family: Play, sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 50px
+      line-height: 115%
+      text-align: center
+      color: #033756
+      @media (max-width: 768px)
+        font-size: 30px
+    h2
+      font-family: Arial, sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 25px
+      line-height: 115%
+      color: #033756
+      text-align: center
+      margin: 15px 0 55px 0
+      @media (max-width: 768px)
+        font-size: 18px
+        margin: 15px 0 20px 0
+    .have__content
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-gap: 30px
+      @media (max-width: 1200px)
+        grid-template-columns: 1fr 1fr
+      @media (max-width: 1024px)
+        grid-gap: 20px
+      @media (max-width: 768px)
+        grid-template-columns: 1fr
+      .have__item
+        background-image: url("../img/have/01.png")
+        background-size: cover
+        background-position: center
+        border-radius: 15px
+        cursor: pointer
+        position: relative
+        display: flex
+        @media (max-width: 768px)
+          min-height: 300px
+        &:hover
+          .have__text
+            .have__paragraphs
+              p
+                opacity: 1
+                visibility: visible
+          .have__background
+            div
+              &:last-child
+                opacity: 1
+                visibility: visible
+        &:nth-child(2)
+          background-image: url("../img/have/02.png")
+        &:nth-child(3)
+          background-image: url("../img/have/03.png")
+        &:nth-child(4)
+          background-image: url("../img/have/04.png")
+        &:nth-child(5)
+          background-image: url("../img/have/05.png")
+        &:nth-child(6)
+          background-image: url("../img/have/06.png")
+        .have__text
+          padding: 90px 42px 30px 42px
+          position: relative
+          z-index: 5
+          margin-top: auto
+          @media (max-width: 1024px)
+            padding: 45px 21px 20px 21px
+          .have__paragraphs
+            p
+              font-family: Arial, sans-serif
+              font-style: normal
+              font-weight: normal
+              font-size: 20px
+              line-height: 115%
+              color: #FFFFFF
+              opacity: 0
+              visibility: hidden
+              transition-duration: 0.3s
+              @media (max-width: 1024px)
+                font-size: 16px
+              @media (max-width: 768px)
+                opacity: 1
+                visibility: visible
+                margin-bottom: 30px
+              &:not(:last-child)
+                margin-bottom: 23px
+          h3
+            font-family: Play, sans-serif
+            font-style: normal
+            font-weight: bold
+            font-size: 35px
+            line-height: 114%
+            color: #FFFFFF
+            margin-top: 12px
+            @media (max-width: 1024px)
+              font-size: 28px
+        .have__background
+          div
+            &:first-child
+              width: 100%
+              height: 100%
+              z-index: 1
+              position: absolute
+              top: 0
+              left: 0
+              background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(0, 3, 5, 0.84) 100%)
+              border-radius: 15px
+            &:last-child
+              background: linear-gradient(179.88deg, rgba(37, 154, 235, 0.5) 3.22%, rgba(33, 139, 225, 0.5) 47.03%)
+              border: 1px solid #FFFFFF
+              filter: blur(20px)
+              border-radius: 15px
+              width: calc(100% - 4px)
+              height: calc(100% - 13px)
+              position: absolute
+              opacity: 0
+              visibility: hidden
+              transition-duration: 0.3s
+              z-index: 2
+              top: 50%
+              left: 50%
+              transform: translate(-50%, -50%)
+              @media (max-width: 768px)
+                opacity: 1
+                visibility: visible
+
+
+
+
+
+
+
+
+
+
+
