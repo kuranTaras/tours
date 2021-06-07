@@ -123,6 +123,8 @@ $(window).on("load" , function () {
     $('.header__burger').on('click', () => {
         $('.header__menu').toggleClass('header__menu_active')
         $('body').toggleClass('body_overflow')
+        $('.header__burger').toggleClass('header__burger_active')
+        $('.header__language').toggleClass('header__language_active')
     })
     $('.header__link').on('click', () => {
         $('.header__menu').removeClass('header__menu_active')
