@@ -2,9 +2,365 @@
 <html lang="ru">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic" rel="stylesheet">
+    <link rel="Stylesheet" href="https://export.otpusk.com/os/onsite/tour.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic" rel="stylesheet">
     <link rel="Stylesheet" href="https://export.otpusk.com/os/onsite/form.css" type="text/css" />
     <link rel="Stylesheet" href="https://export.otpusk.com/os/onsite/result.css" type="text/css" />
-    <link rel="Stylesheet" href="https://export.otpusk.com/os/onsite/tour.css" type="text/css" />
+    <link rel="Stylesheet" href="https://export.otpusk.com/os/excursion/form.css" type="text/css" />
+    <link rel="Stylesheet" href="https://export.otpusk.com/os/excursion/result.css" type="text/css" />
+    <link rel="Stylesheet" href="https://export.otpusk.com/os/excursion/tour.css" type="text/css" />
+    <link rel="stylesheet" media="screen" href="https://export.otpusk.com/os/hot-module.css" />
+    <style>
+        /* Відступи модуля */
+        .os-top-countries{
+            padding: 20px 17px 0;
+        }
+        /* Відступи між колонками */
+        .os-top-countries-image ul{
+            margin-left: -20px;
+        }
+        .os-top-countries-image .os-top-countries-item{
+            padding-left: 20px;
+            margin-bottom: 20px;
+            max-width: 240px;
+            height: auto;
+            position: static;
+            float: none;
+        }
+        .os-top-countries-text .os-top-countries-item{
+            padding-left: 26px;
+            height: auto;
+            position: static;
+            float: none;
+        }
+        .os-top-countries-text ul{
+            margin-left: -26px;
+        }
+        /* Стилі туру */
+        .os-top-countries-text .os-top-countries-item{
+            margin-bottom: 18px;
+            max-width: 287px;
+        }
+        .os-top-countries-image .os-top-countries-item > a{
+            box-shadow: 0 0 5px 1px rgba(0,0,0,0.3);
+            -webkit-transition: all .4s;
+            -moz-transition: all .4s;
+            -o-transition: all .4s;
+            transition: all .4s;
+        }
+        .os-top-countries-image .os-top-countries-item > a:hover{
+            -webkit-filter: contrast(1.2);
+            filter: contrast(1.2);
+        }
+        /* Стилі лінії в текстовій версії */
+        .os-top-countries-text .os-top-countries-item > a:before{
+            top: 14px;
+            left: 35px;
+            height: 1px;
+            background-color: #e1e1e1;
+        }
+        /* Назва країни */
+        .os-top-countries-image .os-top-countries-item .os-country-name{
+            color: #fff;
+            line-height: 21px;
+            font-family: sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .os-top-countries-text .os-top-countries-item .os-country-name{
+            line-height: 26px;
+            font-size: 14px;
+            color: #333;
+            font-family: sans-serif;
+        }
+        /* Блок з ціною */
+        .os-top-countries-image .os-top-countries-item .os-country-price{
+            background-color: rgba(239, 125, 12, 0.95);
+            font-size: 12px;
+            color: #fff;
+            font-family: sans-serif;
+        }
+        /* "от" */
+        .os-top-countries-text .os-top-countries-item .os-country-price span:nth-child(1){
+            font-size: 10px;
+            color: #7e7e7e;
+        }
+        /* число */
+        .os-top-countries-image .os-top-countries-item .os-country-price span:nth-child(2){
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .os-top-countries-text .os-top-countries-item .os-country-price span:nth-child(2){
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 26px;
+            color: #0799ff;
+        }
+        /* "$/чел." */
+        .os-top-countries-text .os-top-countries-item .os-country-price span:nth-child(3){
+            font-size: 14px;
+            line-height: 26px;
+            color: #0799ff;
+            font-weight: 100;
+        }
+        .os-top-countries-text .os-top-countries-item .os-country-price span:nth-child(2){
+            padding-left: 6px;
+        }
+        .os-top-countries-text .os-top-countries-item .os-country-price span:nth-child(2),
+        .os-top-countries-text .os-top-countries-item .os-country-price span:nth-child(3){
+            background-color: #fff;
+            line-height: 26px;
+        }
+        @media screen and (min-width: 846px){
+            .os-top-countries{
+                padding: 40px 17px 0;
+            }
+        }
+        .os-top-countries-item.small .os-country-price span:nth-child(1) {
+            top: -2px;
+        }
+        .os-top-countries-text .os-top-countries-item.small .os-country-price span:nth-child(2){
+            position: relative;
+            top: -4px;
+            padding-left: 15px;
+            font-size: 16px;
+        }
+        .os-top-countries-text .os-top-countries-item.small .os-country-price span:nth-child(3){
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            line-height: 12px;
+            font-size: 12px;
+            background-color: transparent;
+        }
+    </style>
+    <style>
+        /*==== Стилизация для модуля горящих туров с типом "плитки" ====*/
+
+        /* Отступы для контейнера, содержащего все блоки */
+        body .hot-block_tiles .hot-wrapper {
+            margin-top: 0px; /*отступ сверху*/
+            margin-left: 0px; /*отступ слева*/
+            margin-bottom: 0px; /*отступ снизу*/
+            margin-right: -10px !important; /*Внимание!!! должно совпадать с положительным margin-right в .hot-otp-form-wrap ниже*/
+        }
+
+        /* Отступы между блоками */
+        body .hot-block_tiles .hot-otp-form-wrap {
+            margin-top: 10px; /*отступ сверху*/
+            margin-right: 10px; /*отступ справа. Внимание!!! должно совпадать с отрицательным значением margin-right в .hot-wrapper выше*/
+        }
+
+        /* Ширина основного блока */
+        body .hot-block_tiles .hot-otp-img,
+        body .hot-block_tiles .hot-otp-tour-block {
+            width: 300px !important; /*(в пределах от 240 до 360 пикселей)*/
+        }
+
+        /* Градиент основного блока */
+        body .hot-block_tiles .hot-otp-tour-block {
+            background: -moz-linear-gradient(-10deg, rgba(32,32,32,0.75) 0%, rgba(32,32,32,0) 50%), -moz-linear-gradient(10deg, rgba(32,32,32,0.75) 0%, rgba(32,32,32,0) 50%);
+            background: -webkit-linear-gradient(-10deg, rgba(32,32,32,0.75) 0%,rgba(32,32,32,0) 50%), -webkit-linear-gradient(10deg, rgba(32,32,32,0.75) 0%,rgba(32,32,32,0) 50%);
+            background: linear-gradient(170deg, rgba(32,32,32,0.75) 0%,rgba(32,32,32,0) 50%), linear-gradient(10deg, rgba(32,32,32,0.75) 0%,rgba(32,32,32,0) 50%);
+        }
+
+        /* Скругление углов основного блока */
+        body .hot-block_tiles .hot-otp-form-wrap {
+            border-radius: 4px;
+        }
+
+        /* Плашка под нижний текст */
+        body .hot-block_tiles .hot-otp-img:after {
+            background: rgba(255,0,0,.7); /*фон плашки (цвет, градиент, картинка)*/
+            height: 0; /*высота плашки, например: height: 73px;*/
+        }
+
+        /* Значение прозрачности фоновой картинки основного блока при наведении */
+        body .hot-block_tiles .hot-otp-form-wrap:hover .hot-otp-img {
+            opacity: .8;
+        }
+
+        /*=== Стилизация частей основного блока ===*/
+
+        /*== 1. Заголовок блока (верхяя строка, большие буквы) ==*/
+        body .hot-block_tiles .hot-otp-description {
+            font-family: arial; /*семейство шрифта*/
+            font-size: 18px; /*размер шрифта*/
+            line-height: 21px; /*высота линии*/
+            font-weight: bold; /*жирный шрифт, для обычного font-weight: normal;*/
+            font-style: normal; /*без курсива, для курсива font-style: italic;*/
+            color: #fff !important; /*цвет*/
+            padding-top: 18px; /*отступ сверху*/
+            padding-left: 20px; /*отступ слева*/
+            padding-right: 20px;  /*отступ справа*/
+        }
+        /* При наведении мышки на основной блок */
+        body .hot-block_tiles .hot-otp-tour-block:hover .hot-otp-description {
+            text-decoration: none !important; /*подчеркивания нет, чтобы было text-decoration: underline*/
+            color: #fff !important; /*цвет*/
+        }
+
+        /*== 2. Строка под заголовком (буквы поменьше) ==*/
+        body .hot-block_tiles .hot-otp-place {
+            font-family: arial; /*семейство шрифта*/
+            font-size: 13px; /*размер шрифта*/
+            line-height: 15px; /*высота линии*/
+            font-weight: bold; /*жирный шрифт, для обычного font-weight: normal;*/
+            font-style: normal !important; /*без курсива, для курсива font-style: italic*/
+            color: #fff !important; /*цвет*/
+            padding-top: 0; /*отступ сверху*/
+            padding-left: 20px; /*отступ слева*/
+            padding-right: 20px;  /*отступ справа*/
+        }
+        /* При наведении мышки на основной блок */
+        body .hot-block_tiles .hot-otp-tour-block:hover .hot-otp-place {
+            text-decoration: none !important; /*подчеркивания нет, чтобы было text-decoration: underline*/
+            color: #fff !important; /*цвет*/
+        }
+
+        /*== 3. Строка с описанием тура в нижнем левом углу (курсив) ==*/
+        body .hot-block_tiles .hot-otp-tour-info {
+            font-family: arial; /*семейство шрифта*/
+            font-size: 13px; /*размер шрифта*/
+            line-height: 16px; /*высота линии*/
+            font-weight: normal; /*обычный шрифт, для жирного font-weight: bold;*/
+            font-style: italic; /*с курсивом, если без курсива font-style: normal;*/
+            color: #fff; /*цвет*/
+            left: 20px; /*отступ слева*/
+            bottom: 13px; /*отступ снизу*/
+            width: 130px; /*ширина блока*/
+        }
+        /* При наведении мышки на основной блок */
+        body .hot-block_tiles .hot-otp-tour-block:hover .hot-otp-tour-info {
+            text-decoration: none !important; /*подчеркивания нет, чтобы было text-decoration: underline*/
+            color: #fff !important; /*цвет*/
+        }
+
+        /*== 4. Блок с ценой тура в нижнем правом углу (описание + цена) ==*/
+        body .hot-block_tiles .hot-price-block {
+            padding-right: 20px; /*отступ справа*/
+            padding-bottom: 11px; /*отступ снизу*/
+        }
+
+        /*== 4.1. Блок с ценой тура в нижнем правом углу (описание) ==*/
+        body .hot-block_tiles .hot-otp-price-count,
+        body .hot-block_tiles .hot-otp-price-count nobr {
+            font-family: arial; /*семейство шрифта*/
+            font-size: 11px; /*размер шрифта*/
+            line-height: 10px; /*высота линии*/
+            font-weight: normal; /*обычный шрифт, для жирного font-weight: bold;*/
+            font-style: normal; /*без курсива, для курсива font-style: italic;*/
+            color: #fff !important; /*цвет*/
+        }
+        body .hot-block_tiles .hot-otp-price-count {
+            width: 60px; /*ширина блока*/
+        }
+        /* При наведении мышки на основной блок */
+        body .hot-block_tiles .hot-otp-tour-block:hover .hot-otp-price-count,
+        body .hot-block_tiles .hot-otp-tour-block:hover .hot-otp-price-count nobr {
+            text-decoration: none !important; /*подчеркивания нет, чтобы было text-decoration: underline*/
+            color: #fff !important; /*цвет*/
+        }
+
+        /*== 4.2. Блок с ценой тура в нижнем правом углу (цена) ==*/
+        body .hot-block_tiles .hot-otp-price a {
+            font-family: arial; /*семейство шрифта*/
+            font-size: 24px; /*размер шрифта*/
+            line-height: 28px; /*высота линии*/
+            font-weight: bold; /*жирный шрифт, для обычного font-weight: normal;*/
+            font-style: normal; /*без курсива, для курсива font-style: italic;*/
+            color: #fff !important; /*цвет*/
+        }
+        /* При наведении мышки на основной блок */
+        body .hot-block_tiles .hot-otp-tour-block:hover .hot-otp-price a {
+            text-decoration: none !important; /*подчеркивания нет, чтобы было text-decoration: underline*/
+            color: #fff !important; /*цвет*/
+        }
+
+    </style>
+    <style>
+        /* Фон и рамка формы */
+        body .os-order-form-wrap {background: #fff; border: 5px solid #eee;}
+
+        /* Заголовок формы */
+        body .os-order-form-wrap .os-order-header-title {
+            color: #4cb5ff; /*цвет шрифта.
+  Добавьте !important сработало, например:
+  color: blue !important;*/
+            font-size: 27px; /*размер шрифта*/
+            font-weight: bold; /*жирность шрифта*/
+            font-family: arial; /*семейство шрифта*/
+        }
+
+        /* Шрифты и цвета некоторых полей (взрослые и дети, и, возраст детей, возможны другие даты) */
+        body .os-order-first-title,
+        body .os-order-and-title,
+        body .os-order-second-title,
+        body .os-order-input-dates label {font-family: arial; color: #666;} /*возможны другие даты*/
+
+        /* Выпадающие списки (страна, курорт, взрослые, дети, возрасты, длительности) */
+        body .os-order-form-wrap select {font-family: arial; color: #000;}
+        body .os-order-select-wrapper,
+        body .os-order-select-wrapper:after {background: #fff;}
+        body .os-order-select-wrapper {border-radius: 5px; border: 1px solid #c3c3c3;}
+        body .os-order-input-duration .os-order-select-wrapper {border-radius: 5px;} /*длительность*/
+
+        /* Цвета иконок в полях. Добавьте !important чтобы сработало, например:
+           body .os-order-input-country .os-order-select-wrapper:after {color: green !important;}*/
+        body .os-order-form-wrap .os-order-select-wrapper:after {color: #4cb5ff;} /*выпадающий список ближайшего офиса*/
+
+        /* Шрифты, их цвета, фон и цвет рамки в полях формы (имя, телефон, е-мейл, пожелания)*/
+        body .os-order-user-contacts input,
+        body .os-order-form-wrap textarea {font-family: arial; color: #000; background: #F0F0F0; border-color: #c3c3c3;}
+
+        /* Скругление углов в полях формы (имя, телефон, е-мейл, пожелания) (4 значения означают углы: верхний-левый верхний-правый нижний-правый нижний-левый)*/
+        body .os-order-user-contacts input,
+        body .os-order-form-wrap textarea {border-radius: 0px 0px 0px 0px;}
+
+        /* Скругление углов в выпадающем списке "ближайший офис"*/
+        body .os-order-input-office .os-order-select-wrapper {border-radius: 0px 0px 0px 0px;}
+
+        /* Поле даты */
+        body .os-order-input-dates .os-order-input-wrapper {
+            font-family: arial; /*семейство шрифта*/
+            color: #000; /*цвет шрифта*/
+            background: #fff; /*цвет фона*/
+            border-radius: 5px; /*скругление углов*/
+            border-color: #c3c3c3; /*цвет рамки*/
+        }
+        body .os-order-input-dates .os-order-input-wrapper:after {color: #4cb5ff;} /*цвет иконки календаря. Добавьте !important чтобы сработало*/
+
+        /* Кнопка "Отправить" */
+        body .os-order-form-submit_button {
+            font: bold 18px Arial; /* шрифт */
+            color: #ffffff; /*цвет шрифта*/
+            border: 5px solid #dbdbdb; /*рамка*/
+            border-radius: 25px; /*скругление углов*/
+            background: #4cb5ff; /*цвет фона (добавьте !important чтобы сработало) */
+            height: 50px; /*высота кнопки*/
+            width: 200px; /*ширина кнопки*/
+        }
+        /* Кнопка "Отправить" при наведении мыши (добавьте !important чтобы сработало) */
+        body .os-order-form-submit_button:hover {
+            background: #4cb5ff; /*цвет фона (добавьте !important чтобы сработало) */
+            border-color: #B7B7B7;
+        }
+
+        body .os-order-header-title, .os-order-form-wrap *:after {
+            color: #4cb5ff !important;
+        }
+        body .table-condensed .prev, .table-condensed .next, .table-condensed .switch {
+            background-color: #4cb5ff !important;
+        }
+        body .datepicker {
+            border-color: #4cb5ff !important;
+            z-index:9999;
+        }
+        body .os-order-form-submit_button {
+            background-color: #4cb5ff !important;
+            background-image: linear-gradient(to bottom, #4cb5ff, #1a83cd) !important;
+        }
+    </style>
     <meta charset="UTF-8">
 
     <!-- Useful meta tags -->
@@ -125,10 +481,11 @@
                     </a>
                 </div>
             </div>
-            <div class="hero__search">
+            <div class="hero__search hero__form_active">
+                <a href="" name="search"></a>
                 <div class="hero__search-text">
                     <span>Пошук турів</span>
-                    <span>Автобусні тури</span>
+                    <span class="enter-ex">Автобусні тури</span>
                 </div>
                 <div class="hero-background"></div>
                 <script>
@@ -145,6 +502,23 @@
                 </script>
                 <script src="https://export.otpusk.com/api/session?access_token=31003-2a242-cd507-6844e-1fb16"></script>
                 <script src="https://export.otpusk.com/js/onsite/"></script>
+                <script src="https://export.otpusk.com/js/order"></script>
+            </div>
+            <div class="hero__ex">
+                <div class="hero__search-text">
+                    <span>Пошук турів</span>
+                    <span class="enter-buss">Екскурсійні тури</span>
+                </div>
+                <script>
+                    var osGeo = ""; /* Страна, курорт или отель по умолчанию в форме поиска */
+                    var osTarget = ""; /* URL для отправки формы */
+                    var osContainer = null; /* Элемент DIV, в котором выводить результаты поиска */
+                    var osTourContainer = null; /* Элемент DIV, в котором выводить подробную информацию о туре */
+                    var osLang = 'ua'; /* Язык интерфейса (ru|ua) */
+                    var enableMediumForm = true; /* Стили для промежуточной формы при ширине родительского элемента от 600 до 950px */
+                </script>
+                <script src="https://export.otpusk.com/api/session?access_token=31003-2a242-cd507-6844e-1fb16"></script>
+                <script src="https://export.otpusk.com/js/excursion/"></script>
                 <script src="https://export.otpusk.com/js/order"></script>
             </div>
         </div>

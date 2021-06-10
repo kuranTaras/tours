@@ -21,6 +21,14 @@ $(window).on("load" , function () {
             }
         }
     });
+    $('.enter-buss').on('click', () => {
+        $('.hero__search').addClass('hero__form_active')
+        $('.hero__ex').removeClass('hero__form_active')
+    })
+    $('.enter-ex').on('click', () => {
+        $('.hero__search').removeClass('hero__form_active')
+        $('.hero__ex').addClass('hero__form_active')
+    })
     function initTourSwiper() {
         $('.hot-otp-content').addClass('swiper-container')
         $('.hot-wrapper').addClass('swiper-wrapper')
@@ -130,14 +138,7 @@ $(window).on("load" , function () {
         $('.header__menu').removeClass('header__menu_active')
         $('body').removeClass('body_overflow')
     })
-    $('.enter-buss').on('click', () => {
-        $('.hero__search').addClass('hero__form_active')
-        $('.hero__ex').removeClass('hero__form_active')
-    })
-    $('.enter-ex').on('click', () => {
-        $('.hero__search').removeClass('hero__form_active')
-        $('.hero__ex').addClass('hero__form_active')
-    })
+
 })
 
 $(document).ready(function (){

@@ -606,11 +606,11 @@
                     </a>
                 </div>
             </div>
-            <div class="hero__search">
+            <div class="hero__search hero__form_active">
                 <a href="" name="search"></a>
                 <div class="hero__search-text">
                     <span>Поиск туров</span>
-                    <span>Автобусные туры</span>
+                    <span class="enter-ex">Автобусные туры</span>
                 </div>
                 <div class="hero-background"></div>
                 <script>
@@ -627,6 +627,23 @@
                 </script>
                 <script src="https://export.otpusk.com/api/session?access_token=31003-2a242-cd507-6844e-1fb16"></script>
                 <script src="https://export.otpusk.com/js/onsite/"></script>
+                <script src="https://export.otpusk.com/js/order"></script>
+            </div>
+            <div class="hero__ex">
+                <div class="hero__search-text">
+                    <span>Поиск туров</span>
+                    <span class="enter-buss">Экскурсионные туры</span>
+                </div>
+                <script>
+                    var osGeo = ""; /* Страна, курорт или отель по умолчанию в форме поиска */
+                    var osTarget = ""; /* URL для отправки формы */
+                    var osContainer = null; /* Элемент DIV, в котором выводить результаты поиска */
+                    var osTourContainer = null; /* Элемент DIV, в котором выводить подробную информацию о туре */
+                    var osLang = 'ru'; /* Язык интерфейса (ru|ua) */
+                    var enableMediumForm = true; /* Стили для промежуточной формы при ширине родительского элемента от 600 до 950px */
+                </script>
+                <script src="https://export.otpusk.com/api/session?access_token=31003-2a242-cd507-6844e-1fb16"></script>
+                <script src="https://export.otpusk.com/js/excursion/"></script>
                 <script src="https://export.otpusk.com/js/order"></script>
             </div>
         </div>
