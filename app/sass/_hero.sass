@@ -152,12 +152,13 @@
               transition-duration: 0.3s
     .hero__search
       position: relative
+      display: none
       .hero__search-text
         position: absolute
         transform: translateY(100%)
         top: 0
         left: 55px
-        z-index: 1
+        z-index: 10
         @media (max-width: 1400px)
           left: 20px
         span
@@ -172,6 +173,7 @@
           &:last-child
             color: #FFFFFF
             margin-left: 30px
+            cursor: pointer
             @media (max-width: 520px)
               margin-left: 15px
       .hero-background
@@ -379,6 +381,249 @@
           right: 11px
           transform: translateY(-50%)
           background: url("../img/hero/02.png") #FFFFFF
+    .hero__ex
+      position: relative
+      display: none
+      .hero__search-text
+        position: absolute
+        transform: translateY(100%)
+        top: 0
+        left: 55px
+        z-index: 1
+        @media (max-width: 1400px)
+          left: 20px
+        span
+          font-family: Play, sans-serif
+          font-style: normal
+          font-weight: bold
+          font-size: 25px
+          line-height: 29px
+          color: #E15719
+          @media (max-width: 520px)
+            font-size: 18px
+          &:last-child
+            color: #FFFFFF
+            margin-left: 30px
+            cursor: pointer
+            @media (max-width: 520px)
+              margin-left: 15px
+      .exs_r-message
+        margin-top: 10px
+    .hero__form_active
+      display: block
+    .exs_container
+      max-width: 100%
+      padding: 0 0 0 0
+      &:not(:first-child)
+        display: none
+      .exs_search-container
+        background: linear-gradient(180deg, rgba(3, 129, 204, 0.4) 0%, rgba(225, 242, 255, 0.4) 57.29%, rgba(248, 252, 255, 0.4) 100%)
+        border: 1px solid #FFFFFF
+        backdrop-filter: blur(20px)
+        border-radius: 15px 25px 0 0
+        form
+          background: none
+          padding: 0 320px 0 55px
+          @media (max-width: 1300px)
+            padding: 0 275px 0 30px
+          @media (max-width: 1200px)
+            padding-bottom: 50px
+          @media (max-width: 1007px)
+            padding-right: 30px
+          @media (max-width: 768px)
+            padding: 0 15px 20px 15px
+          .clearfix
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            max-width: 1045px
+            grid-gap: 0 15px
+            @media (max-width: 1200px)
+              grid-template-columns: 1fr 1fr
+              grid-gap: 30px
+            @media (max-width: 1007px)
+              grid-gap: 15px
+            @media (max-width: 768px)
+              grid-template-columns: 1fr
+            .ui-autocomplete-input
+              font-family: Arial, sans-serif
+              font-style: normal
+              font-weight: normal
+              font-size: 18px!important
+              line-height: 21px!important
+              color: #033756!important
+              height: 45px!important
+              border: 1px solid #0381CC!important
+            select
+              font-family: Arial, sans-serif
+              font-style: normal
+              font-weight: normal
+              font-size: 18px!important
+              line-height: 21px!important
+              color: #033756!important
+              min-height: 45px!important
+              height: 45px!important
+            .exs_autocomplete-toggle_element
+              background: url("../img/ex/01.png") no-repeat
+              background-size: contain
+              top: 15px
+              right: 4px
+              width: 16px
+              height: 16px
+            .exs_search-label
+              border: 1px solid #0381CC
+              &:after
+                background: url("../img/ex/01.png") no-repeat #FFFFFF
+                background-size: contain
+                top: 15px
+                right: 4px
+                width: 16px
+                height: 16px
+            select
+              padding-left: 20px!important
+
+            .exs_search-label
+              height: 45px
+          .exs_search-to
+            width: 100%
+            @media (max-width: 1007px)
+              width: 100%!important
+              padding-right: 0!important
+            input
+              width: 100%!important
+          .exs_search-duration
+            width: 100%
+            @media (max-width: 1007px)
+              width: 100% !important
+              padding-right: 0!important
+          .exs_search-type
+            width: 100%
+            @media (max-width: 1007px)
+              width: 100%!important
+              padding-right: 0!important
+              margin-top: 0
+          .exs_search-dates-wrap
+            height: 45px
+            display: flex
+            align-items: center
+            background: #FFFFFF
+            width: 100%
+            border: 1px solid #0381CC
+            position: relative
+            padding-right: 20px
+            &:after
+              content: ''
+              position: absolute
+              top: 50%
+              transform: translateY(-50%)
+              right: 4px
+              height: 16px
+              width: 16px
+              background: url("../img/ex/01.png")
+            .exs_datepicker-wrap
+              &:before
+                background: #033756
+
+              input
+                background: none!important
+                font-family: Arial, sans-serif
+                font-style: normal
+                font-weight: normal
+                font-size: 18px!important
+                line-height: 21px!important
+                color: #033756!important
+          .exs_search-title
+            font-family: Play, sans-serif
+            font-style: normal
+            font-weight: bold
+            font-size: 25px
+            line-height: 29px
+            color: #FFFFFF
+            background: none
+            margin-top: 42px
+            height: auto
+            margin-bottom: 20px
+            opacity: 0
+            visibility: hidden
+            @media (max-width: 1007px)
+              margin: 20px 0 20px 0
+            span
+              display: none
+          .exs_search-submit
+            padding: 20px 40px!important
+            width: auto!important
+            height: auto!important
+            font-family: Play, sans-serif!important
+            font-style: normal!important
+            font-weight: bold!important
+            font-size: 25px!important
+            line-height: 115%!important
+            color: #FFFFFF!important
+            border: none!important
+            top: 35px!important
+            border-radius: 35px!important
+            transition-duration: 0.5s
+            right: 75px!important
+            background: linear-gradient(180deg, #E15719, #E15719, #E15719, #FFC806) 0% 0%
+            background-size: 200% 200%
+            @media (max-width: 1300px)
+              right: 30px!important
+            @media (max-width: 768px)
+              font-size: 18px!important
+              padding: 10px 20px!important
+              margin-top: 0!important
+            &:hover
+              background-position: 100% 100%
+            &:active
+              background: linear-gradient(180deg, #FF5C12 0%, #A53401 56.25%, #FF5C12 100%)
+          .exs_search-dates-popup
+            display: none
+        .exs_search-extended
+          display: none
+        .exs_und
+          font-family: Play, sans-serif
+          font-style: normal
+          font-weight: normal
+          font-size: 18px
+          line-height: 21px
+          color: #FFFFFF
+          border-bottom: none
+        .exs_add-dir-btn
+          border-bottom: 1px solid #FFFFFF
+          padding-bottom: 7px
+          margin-top: 20px
+          margin-bottom: 42px
+          @media (max-width: 1200px)
+            margin-bottom: 0
+            margin-top: 10px!important
+        .ui-autocomplete-input
+          padding-left: 20px!important
+        .exs_search-dates, .exs_search-duration, .exs_search-type
+          margin-left: 0
+          @media (max-width: 1007px)
+            width: 100% !important
+            padding-left: 0!important
+            margin: 0!important
+        .exs_add-dir-btn
+          width: 250px
+          @media (max-width: 1200px)
+            margin-top: 30px
+        .exs_dir-list
+          border: none
+          padding: 0 5px 0
+        .dropdown-menu
+          @media (max-width: 768px)
+            left: 0
+    .exs_r-container
+      max-width: 100%
+.os-datepicker-custom-to
+  margin-top: 20px!important
+  input
+    margin-right: 10px
+.os-datepicker-custom-from
+  margin-top: 20px!important
+  input
+    margin-right: 10px
+
 .hero-country
   background-image: url("../img/hero/03.png")
   .container

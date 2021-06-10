@@ -130,16 +130,21 @@ $(window).on("load" , function () {
         $('.header__menu').removeClass('header__menu_active')
         $('body').removeClass('body_overflow')
     })
-
+    $('.enter-buss').on('click', () => {
+        $('.hero__search').addClass('hero__form_active')
+        $('.hero__ex').removeClass('hero__form_active')
+    })
+    $('.enter-ex').on('click', () => {
+        $('.hero__search').removeClass('hero__form_active')
+        $('.hero__ex').addClass('hero__form_active')
+    })
 })
 
 $(document).ready(function (){
-
     $('a[href^="#"]').click(function () {
             $('html, body').animate({
                 scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
             }, 500);
     });
-
 })
 
