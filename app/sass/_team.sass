@@ -22,7 +22,7 @@
       display: grid
       width: 100%
       grid-template-columns: 1fr 1fr 1fr 1fr
-      grid-gap: 30px
+      grid-gap: 75px 30px
       @media (max-width: 1024px)
         grid-template-columns: 1fr 1fr
         grid-gap: 75px 20px
@@ -36,25 +36,28 @@
         backdrop-filter: blur(20px)
         border-radius: 25px
         display: flex
+
         flex-direction: column
         align-items: center
         padding-bottom: 27px
+        padding-left: 10px
+        padding-right: 10px
         &:nth-child(n)
           border-color: #0381CC
           .team__img
             border-color: #078FFF
-        &:nth-child(2n)
-          border-color: #FEE67B
-          .team__img
-            border-color: #FFC806
-        &:nth-child(3n)
-          border-color: #3AAA3E
-          .team__img
-            border-color: #3AAA3E
         &:nth-child(4n)
           border-color: #E15719
           .team__img
             border-color: #E15719
+        &:nth-child(3n)
+          border-color: #3AAA3E
+          .team__img
+            border-color: #3AAA3E
+        &:nth-child(2n)
+          border-color: #FEE67B
+          .team__img
+            border-color: #FFC806
         .team__img
           width: 165px
           height: 165px
