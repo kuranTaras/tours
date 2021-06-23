@@ -149,6 +149,9 @@
     .hero__search
       position: relative
       display: none
+      min-height: 229px
+      @media (max-width: 768px)
+        height: 500px
       .hero__search-text
         position: absolute
         transform: translateY(100%)
@@ -211,12 +214,13 @@
           display: flex
           justify-content: space-between
           align-items: center
+          padding: 0
           @media (max-width: 1220px)
             display: grid
             grid-template-columns: 1fr 1fr 1fr
             grid-gap: 20px
           @media (max-width: 768px)
-            grid-template-columns: 1fr 1fr
+            grid-template-columns: 1fr
             grid-gap: 15px
             padding: 0
           @media (max-width: 520px)
@@ -297,6 +301,7 @@
       .new_f-form-field
         width: 200px
         border: 1px solid #0381CC
+        margin: 0!important
         @media (max-width: 1220px)
           width: 100%!important
         &:before
@@ -315,6 +320,10 @@
         width: 100%
         margin-top: 20px
         padding-bottom: 25px
+        top: auto
+        left: -15px
+        text-align: left
+        bottom: 10px
         .new_f-ext-btn
           padding-left: 0
           span
@@ -432,8 +441,8 @@
         form
           background: none
           padding: 0 320px 0 55px
-          @media (max-width: 1300px)
-            padding: 0 275px 0 30px
+          @media (max-width: 1400px)
+            padding: 0 275px 0 20px
           @media (max-width: 1200px)
             padding-bottom: 50px
           @media (max-width: 1007px)
@@ -573,8 +582,8 @@
             right: 75px!important
             background: linear-gradient(180deg, #E15719, #E15719, #E15719, #FFC806) 0% 0%
             background-size: 200% 200%
-            @media (max-width: 1300px)
-              right: 30px!important
+            @media (max-width: 1400px)
+              right: 20px!important
             @media (max-width: 768px)
               font-size: 18px!important
               padding: 10px 20px!important
